@@ -1,0 +1,141 @@
+/* ----------header-page---------- */
+.header-page {
+
+    width: 100%;
+
+    top: 0;
+    left: 0;
+
+    background-color: var(--primary-background-color);
+
+    border-bottom: 1px solid #ececec;
+   
+}
+
+
+
+/* -----For logo----- */
+
+.header-page__logo {
+    margin-right: 93px;
+    color: var(--secondary-font-color);
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+
+    transition: color var(--time-function);
+}
+
+.header-page__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.header-page__logo-span {
+    color: var(--focus-color);
+}
+
+.header-page__logo:hover {
+    color: var(--focus-color);
+}
+
+/* -----Navigation----- */
+
+.nav-list {
+    display: flex;
+
+    color: var(--secondary-font-color);
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+
+
+    &__link:hover,
+    &__link:focus {
+        color: var(--focus-color);
+    }
+
+    &__item {
+        position: relative;
+        
+    }
+
+    &__item:not(:last-child) {
+    margin-right: 50px;
+
+}
+
+    &__link {
+        display: block;
+
+        padding-top: 32px;
+        padding-bottom: 28px;
+
+        transition: color var(--time-function);
+    }
+}
+
+
+
+
+/* -----Contacts----- */
+
+.contacts-header {
+    display: flex;
+    margin-left: auto;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+
+    &__item .link {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition: color var(--time-function);
+}
+
+    &__item {
+    display: flex;
+}
+
+&__item .link:hover,
+&__item .link:focus {
+    color: var(--focus-color);
+
+}
+
+&__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+&__icon-mail {
+
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+&__icon-phone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+
+}
+
+
+
+
+

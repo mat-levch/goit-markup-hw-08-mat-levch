@@ -1,0 +1,32 @@
+/* --------------Soft-skills-------------- */
+
+.soft-skills__list {
+    display: flex;
+}
+
+.soft-skills__icon-div {
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    background-color: var(--secondary-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+}
+
+.soft-skills__title {
+    margin-bottom: 10px;
+    color: var(--secondary-font-color);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.soft-skills__item {
+    width: 270px;
+}

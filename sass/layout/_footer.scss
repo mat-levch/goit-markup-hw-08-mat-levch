@@ -1,0 +1,219 @@
+/* --------------Footer-------------- */
+
+.page-footer {
+    background-color: var(--footer-background-color);
+
+
+    &__footer-container {
+    display: flex;
+    align-items: baseline;
+
+    width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 15px;
+}
+
+&__logo-div {
+    width: 231px;
+    margin-right: 70px;
+}
+
+&__logo {
+    display: block;
+    margin-bottom: 20px;
+
+    color: var(--primary-background-color);
+
+    font-family: 'Raleway', sans-serif;
+
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+
+    transition: color var(--time-function);
+}
+
+
+&__logo-span {
+    color: var(--focus-color);
+}
+
+&__logo:hover,
+&__logo:focus {
+    color: var(--focus-color);
+}
+
+&__address {
+    font-style: normal;
+}
+
+&__address-link {
+    text-decoration: none;
+    color: var(--primary-background-color);
+
+}
+
+&__address-item {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+&__address-item .link {
+    transition: color var(--time-function);
+}
+
+&__address-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+&__link {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: .03em;
+    color: rgba(255, 255, 255, .6);
+    transition: color var(--time-function);
+}
+
+&__link:hover,
+&__link:focus {
+    color: var(--focus-color);
+}
+
+&__bold {
+    display: block;
+    margin-bottom: 20px;
+
+    color: var(--primary-background-color);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+&__social-list {
+    display: flex;
+}
+
+// second part footer
+&__form {
+    display: flex;
+    align-items: center;
+}
+
+&__form-container {
+    margin-left: auto;
+}
+
+&__input {
+
+    padding-left: 16px;
+
+    width: 358px;
+    height: 50px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    outline: none;
+
+    background-color: var(--footer-background-color);
+    color: var(--primary-background-color);
+
+    transition: border-color var(--time-function);
+}
+
+&__input:hover,
+&__input:focus {
+
+    border-color: var(--focus-color);
+}
+
+&__input::placeholder {
+
+    font-size: 16px;
+    line-height: 1.25;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+&__submit-button {
+
+    display: flex;
+    align-items: center;
+
+    margin-left: 12px;
+    padding: 10px 28px 10px 29px;
+
+    height: 50px;
+
+    border-width: 0px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    outline: none;
+
+    background-color: var(--focus-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: var(--primary-background-color);
+}
+
+&__icon {
+
+    margin-left: 10px;
+}
+}
+
+
+
+.social__icon {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+    transition: fill var(--time-function);
+}
+
+.social__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social__svg-footer-container {
+    display: flex;
+    align-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-background-color);
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+    transition: background var(--time-function), color var(--time-function);
+
+    &:hover,
+    &:focus {
+    border-radius: 50px;
+    color: var(--primary-background-color);
+    background-color: var(--focus-color);
+}
+
+}
+
+
