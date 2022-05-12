@@ -1,0 +1,41 @@
+.menu-btn {
+position: relative;
+display: flex;
+width: 40px;
+height: 40px;
+background-color: transparent;
+border: none;
+margin: 0;
+padding: 0;
+z-index: 99;
+
+    
+
+&__icon {
+    &:hover,
+    &:focus{
+        fill: var(--focus-color);
+        transition: fill var(--time-function);
+    }
+
+    &-open{
+        opacity: 1;
+        
+    }
+    &-close{
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+        display: none;
+    }
+
+&.is-open &__icon-open{
+    opacity: 0;
+}
+&.is-open &__icon-close {
+    opacity: 1;
+}    
+}
+
