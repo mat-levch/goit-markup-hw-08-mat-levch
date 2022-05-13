@@ -18,6 +18,8 @@ body {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Обнуление */
@@ -52,8 +54,7 @@ a {
     text-decoration: none;
 }
 
-.title {
-    margin-bottom: 50px;
+.title {        
     color: var(--secondary-font-color);
 
     font-weight: 700;
@@ -64,16 +65,21 @@ a {
 }
 
 .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq (desktop){
     padding-top: 94px;
     padding-bottom: 94px;
+    }
 }
 
 .current {
     color: var(--focus-color);
 }
 
-
-.current::after {
+@include mq (tablet){
+    .current::after {
 
     position: absolute;
 
@@ -88,11 +94,18 @@ a {
 
     background: var(--focus-color);
     border-radius: 2px;
+        
+    }
 
 }
 
+
+
 .item:not(:last-child) {
-    margin-right: 30px;
+    @include mq (desktop){
+       margin-right: 30px; 
+    }
+    
 }
 
 .item.thumb {

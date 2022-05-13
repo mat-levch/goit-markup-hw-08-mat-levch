@@ -3,27 +3,74 @@
 .hero {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    max-width: 1600px;
-    height: 600px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    max-width: 450px;
     background-repeat: no-repeat;
     background-size: cover;
-
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-hero.jpg);
     background-color: var(--footer-background-color);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero/bg-hero_sm.png);
 
+    @include mq (tablet){
+        max-width: 768px;
+    }
+
+    @include mq (desktop) {
+        max-width: 1600px;
+    }
+
+// Ретінізація зображень
+
+    @include mq (mobile){
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+    url(../images/hero/bg-hero_sm.png);
+    @include mq (retina){
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+        url(../images/hero/bg-hero_sm@2x.png);
+    }  
+    }
+    
+
+    @include mq (tablet) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero/bg-hero_md.png);
+    
+        @include mq (retina) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/hero/bg-hero_md@2x.png);
+         }
+    }
+
+    @include mq (desktop) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero/bg-hero_lg.png);
+    
+        @include mq (retina) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/hero/bg-hero_lg@2x.png);
+        }
+    }
 
     &__title {
 
     color: var(--primary-background-color);
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    width: 360px;
+    margin: 0px auto;    
+    margin-bottom: 30px;    
+        
+        @include mq (desktop){
+        font-size: 44px;
+        line-height: 1.36;
+        }
+        
 }
 
     &__button {

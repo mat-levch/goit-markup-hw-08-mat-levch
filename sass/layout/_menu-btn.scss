@@ -11,7 +11,18 @@ z-index: 99;
 
     
 
+&.is-open{
+    @include mq (mobile){
+    position: fixed;
+    margin-top: 10px;
+    margin-left: 410px;
+    }
+    
+}
+    
+
 &__icon {
+
     &:hover,
     &:focus{
         fill: var(--focus-color);

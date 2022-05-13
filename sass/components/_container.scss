@@ -1,5 +1,6 @@
 /* Container */
 .container {    
+    // width: 100%;
     padding: 0px 15px;
     margin: 0 auto;
     
@@ -14,14 +15,14 @@
         
     @media screen and (min-width: 1200px) {
         width: 1200px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
     }
-    // width: 1200px;
-    // display: -webkit-box;
-    // display: -ms-flexbox;
-    // display: flex;
-    // -webkit-box-align: center;
-    // -ms-flex-align: center;
-    // align-items: center;
-
+    
+    outline: 1px solid red;
     
 }
