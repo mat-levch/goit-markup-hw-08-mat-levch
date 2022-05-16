@@ -133,6 +133,7 @@ button {
 .container {
   padding: 0px 15px;
   margin: 0 auto;
+  outline: 1px solid red;
 }
 
 @media screen and (min-width: 480px) {
@@ -562,10 +563,12 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .filter__button {
@@ -727,7 +730,7 @@ button {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 768px) {
   .footer .container {
     width: 768px;
     display: -webkit-box;
@@ -743,6 +746,11 @@ button {
 @media screen and (min-width: 1200px) {
   .footer .container {
     width: 1200px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -876,9 +884,9 @@ button {
 
 @media screen and (min-width: 1200px) {
   .container-mailing__items-direction {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

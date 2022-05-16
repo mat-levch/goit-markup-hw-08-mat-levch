@@ -1,21 +1,20 @@
 /* ---------Filter buttons--------- */
 .filter__portfolio-container {
-    display: block;
+
+    @include mq (desktop){
+       display: block; 
+    }
 }
 
 .filter__list {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
 .filter__button {
-    padding: 6px 22px;
-    height: 38px;
-
     color: var(--footer-background-color);
     background-color: var(--secondary-background-color);
-
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -24,15 +23,63 @@
     letter-spacing: 0.03em;
     border: none;
     border-radius: 4px;
-
+    cursor: pointer;
     transition: background var(--time-function),
-        color var(--time-function),
-        box-shadow var(--time-function);
+    color var(--time-function),
+    box-shadow var(--time-function);
+
+}
+
+.filter__button--all{
+    min-width: 73px;
+    height: 38px;
+    top: 174px;
+    left: 495px;
+    margin: auto 8px auto 8px;
+}
+
+.filter__button-web-site{
+    min-width: 128px;
+    height: 38px;
+    top: 174px;
+    left: 576px;
+    margin: auto 8px auto 8px;
+}
+
+.filter__button--apps{
+  min-width: 145px;
+  height: 38px;
+  top: 174px;
+  left: 712px; 
+  margin: auto 8px auto 8px;
+}
+.filter__button--design{
+    min-width: 103px;
+    height: 38px;
+    top: 174px;
+    left: 865px;
+    margin: auto 8px auto 8px;
+}
+.filter__button--marketing{
+    min-width: 130px;
+    height: 38px;
+    top: 174px;
+    left: 976px;
+    margin: auto 8px auto 8px;
+}
+
+
+.filter__item{
+    margin-bottom: 15px;
 }
 
 .filter__item:not(:last-child) {
     margin-right: 8px;
 }
+.filter__item:nth-last-child(-n+2){
+    margin-bottom: 0px;
+}
+    
 
 .filter__button:hover,
 .filter__button:focus {
