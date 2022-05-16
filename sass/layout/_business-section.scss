@@ -1,13 +1,35 @@
 /* -------------------Business section------------------- */
 
+.business-hide{
+
+    @include mq (mobile-only){
+        display: none;
+    }
+
+    @include mq (tablet-only) {
+        display: none;
+    }
+}
+
+
 .business {
-    padding-top: 0px;
-
-
+    
+    padding-top: 0;
+    padding-bottom: 94px;
 
     &__thumb {
     position: relative;
     z-index: -1;
+
+}
+
+&__title{
+    font-size: 36px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: var(--secondary-font-color);
+        text-align: center;
+        margin-bottom: 50px;
 }
 
 &__description-thumb {

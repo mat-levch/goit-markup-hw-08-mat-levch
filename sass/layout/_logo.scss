@@ -27,17 +27,12 @@
     transition: color var(--time-function);
 }
 
-.page-footer{
-    &__logo-div {
-        width: 231px;
-        margin-right: 70px;
-    }
-    
+.footer{
     &__logo {
         display: block;
         margin-bottom: 20px;
     
-        color: var(--primary-background-color);
+        color: var(--white-font-color);
     
         font-family: 'Raleway', sans-serif;
     

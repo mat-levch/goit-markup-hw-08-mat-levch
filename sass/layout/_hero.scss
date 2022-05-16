@@ -8,16 +8,21 @@
     max-width: 450px;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
     background-color: var(--footer-background-color);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url(../images/hero/bg-hero_sm.png);
 
     @include mq (tablet){
         max-width: 768px;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/hero/bg-hero_md.png);
     }
 
     @include mq (desktop) {
         max-width: 1600px;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/hero/bg-hero_lg.png);
     }
 
 // Ретінізація зображень
@@ -55,42 +60,46 @@
     &__title {
 
     color: var(--primary-background-color);
-
     font-weight: 900;
+    text-align: center;
     font-size: 26px;
     line-height: 1.61;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    width: 360px;
-    margin: 0px auto;    
-    margin-bottom: 30px;    
+    margin: 0px auto;
+    margin-bottom: 30px;
         
-        @include mq (desktop){
-        font-size: 44px;
-        line-height: 1.36;
-        }
+
+    @include mq (tablet) {
+    width: 320px;
+    font-size: 26px;
+    line-height: 1.61;;
+    }
+
+    @include mq (desktop){
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+    }
         
 }
 
     &__button {
-    margin-top: 30px;
+    margin: 0px;
+    padding: 10px 32px;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 32px;
-    min-width: 200px;
 
     color: var(--primary-background-color);
     background-color: var(--focus-color);
 
-
+    font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.9;
+    line-height: 1.875;
     display: flex;
     align-items: center;
     text-align: center;
-    letter-spacing: 0.06em;
+    cursor: pointer;
+    letter-spacing: 0.03em;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-width: 0px;

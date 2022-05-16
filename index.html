@@ -60,13 +60,13 @@
       
   <main>
     <!-- Герой -->
-     <section class="hero">
+      <section class="hero">
       <div>
-        <h1 class="hero__title">Эффективные решения <br> для вашего бизнеса</h1>
+        <h1 class="hero__title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
         <button data-modal-open type="button" class="hero__button">Заказать услугу</button>
-      </div> 
+      </div>  
       <!-- Модальне вікно -->
-       <div data-modal class="backdrop is-hidden">
+        <div data-modal class="backdrop is-hidden">
         <div class="modal">
           <button data-modal-close type="button" class="modal__close-button">
             <svg class="modal__close-button-svg">
@@ -116,7 +116,7 @@
           </form>
         </div>
       </div> 
-     </section> 
+     </section>
 
 <!-- Софт скілс -->
      <section class="soft-skills section">
@@ -164,12 +164,13 @@
     </section> 
 
     <!-- Бізнес -->
-    <!-- <section class="business section">
+    <div class="business-hide">
+     <section class="business section">
       <h2 class="business__title title">Чем мы занимаемся</h2>
       <ul class="business__list container list">
         <li class="business__item item">
           <div class="business__thumb">
-            <img src="./images/photo1.jpg" alt="Программирование" width="370">
+            <img src="./images/business/business1.jpg" alt="Программирование" width="370">
             <div class="business__description-thumb">
               <p class="business__description-text">Десктопные приложения</p>
             </div>
@@ -178,7 +179,7 @@
         </li>
         <li class="business__item item">
           <div class="business__thumb">
-            <img src="./images/photo2.jpg" alt="Анализ" width="370">
+            <img src="./images/business/business2.jpg" alt="Анализ" width="370">
             <div class="business__description-thumb">
               <p class="business__description-text">Мобильные приложения</p>
             </div>
@@ -186,22 +187,22 @@
         </li>
         <li class="business__item item">
           <div class="business__thumb">
-            <img src="./images/photo3.jpg" alt="Дизайн" width="370">
+            <img src="./images/business/business3.jpg" alt="Дизайн" width="370">
             <div class="business__description-thumb">
               <p class="business__description-text">Дизайнерские решения</p>
             </div>
           </div>
         </li>
       </ul>
-    </section> -->
-
+    </section> 
+</div>
     <!-- Команда -->
      <section class="team section">
       <h2 class="team__title title">Наша команда</h2>
       <ul class="team__list container list">
         <li class="team__item  item">
-          <img class="team-member__photo" src="./images/member1.jpg" alt="Игорь Демьяненко" width="450">
-          <div class="team__group-div">
+          <img class="team-member__photo" src="./images/team/member1.jpg" alt="Игорь Демьяненко" width="450">
+          <div class="team-div">
             <h3 class="team__name-title">Игорь Демьяненко</h3>
             <p class="team__position">Product Designer</p>
             <ul class="team__social-list social list">
@@ -237,8 +238,8 @@
           </div>
         </li>
         <li class="team__item  item">
-          <img class="team-member__photo" src="./images/member2.jpg" alt="Ольга Репина" width="450">
-          <div class="team__group-div">
+          <img class="team-member__photo" src="./images/team/member2.jpg" alt="Ольга Репина" width="450">
+          <div class="team-div">
             <h3 class="team__name-title">Ольга Репина</h3>
             <p class="team__position">Frontend Developer</p>
             <ul class="team__social-list social list">
@@ -274,8 +275,8 @@
           </div>
         </li>
         <li class="team__item  item">
-          <img class="team-member__photo" src="./images/member3.jpg" alt="Николай Тарасов" width="450">
-          <div class="team__group-div">
+          <img class="team-member__photo" src="./images/team/member3.jpg" alt="Николай Тарасов" width="450">
+          <div class="team-div">
             <h3 class="team__name-title">Николай Тарасов</h3>
             <p class="team__position">Marketing</p>
             <ul class="team__social-list social list">
@@ -311,8 +312,8 @@
           </div>
         </li>
         <li class="team__item item">
-          <img class="team-member__photo" src="./images/member4.jpg" alt="Михаил Ермаков" width="450">
-          <div class="team__group-div">
+          <img class="team-member__photo" src="./images/team/member4.jpg" alt="Михаил Ермаков" width="450">
+          <div class="team-div">
             <h3 class="team__name-title">Михаил Ермаков</h3>
             <p class="team__position">UI Designer</p>
             <ul class="team__social-list social list">
@@ -350,9 +351,11 @@
       </ul>
     </section> 
     <!-- Компанії -->
-    <!-- <section class="company section">
+     <section class="company section">
+       
       <h2 class="company__title title">Постоянные клиенты</h2>
-      <ul class="company__list container list">
+      <div class="container">
+      <ul class="company__list list">
         <li class="company__item">
           <a class="company__link" href="">
             <svg class="company__icon" width="106" height="60">
@@ -396,26 +399,25 @@
           </a>
         </li>
       </ul>
-    </section> -->
+    </div>
+    </section> 
   </main>
   <!-- Футер -->
-  <!-- <footer class="page-footer">
-
-    
-    <div class="page-footer__footer-container">
-      <div class="page-footer__logo-div">
-        <a href="" class="page-footer__logo link"><span class="page-footer__logo-span">Web</span>Studio</a>
-        <address class="page-footer__address">
-          <ul class="page-footer__address-list list">
-            <li class="page-footer__address-item"><a href="" class="page-footer__address-link">г. Киев, пр-т Леси Украинки, 26</a></li>
-            <li class="page-footer__address-item"><a href="mailto:info@devstudio.com" class="page-footer__link">info@devstudio.com</a></li>
-            <li class="page-footer__address-item"><a href="tel:+380961111111" class="page-footer__link">+38 096 111 11 11</a></li>
+   <footer class="footer">
+    <div class="container">
+      
+      <div class="footer__info">
+        <a href="" class="footer__logo link"><span class="footer__logo-span">Web</span>Studio</a>
+        <address class="footer__address">г. Киев, пр-т Леси Украинки, 26</address>
+          <ul class="footer__address-list list">
+            <li class="footer__address-item"><a href="mailto:info@devstudio.com" class="footer__link">info@devstudio.com</a></li>
+            <li class="footer__address-item"><a href="tel:+380961111111" class="footer__link">+38 096 111 11 11</a></li>
           </ul>
-        </address>
+        
       </div>
-      <div class="page-footer__social social">
-        <b class="page-footer__bold">присоединяйтесь</b>
-        <ul class="page-footer__social-list social list">
+      <div class="footer__social social">
+        <span class="footer__bold">присоединяйтесь</span>
+        <ul class="footer__social-list social list">
           <li class="social__item">
             <a class="social__svg-footer-container link" href="">
               <svg class="social__icon" width="20" height="20">
@@ -447,20 +449,21 @@
         </ul>
       </div>
 
-      <div class="page-footer__form-container">
-        <b class="page-footer__bold">Подпишитесь на рассылку</b>
-
-        <form class="page-footer__form">
-          <input type="text" placeholder="E-mail" class="page-footer__input">
-          <button type="submit" class="page-footer__submit-button">Подписаться
-            <svg class="page-footer__icon" width="24" height="24">
+      <div class="container-mailing">
+  <b class="container-mailing__label">Подпишитесь на рассылку</b>
+        <div class="container-mailing__items-direction" >
+        <form class="container-mailing__form">
+          <input type="text" placeholder="E-mail" class="container-mailing__input">
+        </form>
+          <button class="container-mailing__submit-button">Подписаться
+            <svg class="container-mailing__icon" width="24" height="24">
               <use href="./images/symbol-defs2.svg#icon-send"></use>
             </svg>
           </button>
-        </form>
-      </div>
+        </div>
+        </div>
     </div>
-  </footer> -->
+  </footer>
   
   <!-- Мобільне меню -->
   <div class="mobile-overlay" data-menu>

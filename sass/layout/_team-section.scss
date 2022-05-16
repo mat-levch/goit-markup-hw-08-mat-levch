@@ -6,7 +6,7 @@
 
     &__title{
         margin-bottom: 30px;
-        @include mq (desktop){
+        @include mq (tablet){
             margin-bottom: 50px;
         }
     }
@@ -15,6 +15,8 @@
         @include mq (tablet-only){
             display: flex;
             flex-wrap: wrap;
+            
+            margin-top: -30px;
         }
     }
 
@@ -41,11 +43,8 @@
         letter-spacing: 0.03em;
     }
     
-    &__group-div {
-        padding-top: 30px;
-        padding-right: 30px;
-        padding-left: 30px;
-        padding-bottom: 30px;
+    &-div {
+        padding: 30px 32px;
     }
     
 
@@ -68,9 +67,15 @@
         
         @include mq (tablet-only){
             flex-basis: calc((100% - 60px) / 2);
-
-        &:nth-last-child(-n+2){
+            height: 536px;
+            margin-left: 30px;
             margin-top: 30px;
+            &:nth-child(odd){
+            margin-left: 15px;
+            }
+
+        &:not(:last-child){
+            margin-bottom: 0px;
         }
             
 
