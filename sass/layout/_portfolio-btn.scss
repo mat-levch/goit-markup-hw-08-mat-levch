@@ -7,9 +7,24 @@
 }
 
 .filter__list {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
+
+    @include mq (tablet){
+        justify-content: center;
+    }
+}
+
+.filter__item{
+    margin-bottom: 15px;
+}
+
+.filter__item:not(:last-child) {
+    margin-right: 8px;
+}
+.filter__item:nth-last-child(-n+2){
+    margin-bottom: 0px;
 }
 
 .filter__button {
@@ -35,7 +50,6 @@
     height: 38px;
     top: 174px;
     left: 495px;
-    margin: auto 8px auto 8px;
 }
 
 .filter__button-web-site{
@@ -43,7 +57,6 @@
     height: 38px;
     top: 174px;
     left: 576px;
-    margin: auto 8px auto 8px;
 }
 
 .filter__button--apps{
@@ -51,34 +64,22 @@
   height: 38px;
   top: 174px;
   left: 712px; 
-  margin: auto 8px auto 8px;
 }
 .filter__button--design{
     min-width: 103px;
     height: 38px;
     top: 174px;
     left: 865px;
-    margin: auto 8px auto 8px;
 }
 .filter__button--marketing{
     min-width: 130px;
     height: 38px;
     top: 174px;
     left: 976px;
-    margin: auto 8px auto 8px;
 }
 
 
-.filter__item{
-    margin-bottom: 15px;
-}
 
-.filter__item:not(:last-child) {
-    margin-right: 8px;
-}
-.filter__item:nth-last-child(-n+2){
-    margin-bottom: 0px;
-}
     
 
 .filter__button:hover,

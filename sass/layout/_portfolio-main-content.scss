@@ -8,46 +8,51 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-    letter-spacing: 0.06em;
+    
 }
-
-&__product-type {
-    color: var(--primary-font-color);
-
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.03em;
-}
-
-&__group-div {
-    padding: 20px 24px;
-
-    border-right: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
-    border-left: 1px solid #EEEEEE;
-}
-
 &__list {
     display: flex;
     flex-wrap: wrap;
+
+    @include mq (tablet){
+    margin-top: -30px;
+    margin-left: -30px;  
+    }
+    
+
 }
 
 &__item {
-    margin-bottom: 30px;
+    width: 450px;
+    height: 404px;
+    justify-content: center;
+    @include mq (tablet){
+    flex-basis: calc((100% - 60px) / 2);
+    width: 354px;
     margin-left: 30px;
+    margin-top: 30px; 
+    }
+    
+    &:not(:last-child) {
+    margin-bottom: 30px;
+    }
+
+    &:not(:last-child){
+    @include mq (tablet){
+    margin-bottom: 0;   
+    } 
+    }
+    
+    @include mq (desktop){
+    flex-basis: calc((100% - 90px) / 3);
+    width: 370px; 
+    }
 }
 
-&__item:nth-child(3n + 1) {
-    margin-left: 0px;
-}
 
-&__item:nth-last-child(-n + 3) {
-    margin-bottom: 0px;
-}
 
 &__link {
     display: block;
-
     transition: box-shadow var(--time-function);
 
 }
@@ -67,10 +72,44 @@
     transform: translateY(0);
 }
 
+&__product-type {
+    color: var(--primary-font-color);
+
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+}
+
+&__label {
+    padding: 20px 24px;
+
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+}
+
+
+
+
+
+
+
 &__thumb {
     position: relative;
-
     overflow: hidden;
+
+
+    @media screen and (min-width: 320px){
+    width: 100%;
+    }
+
+    @include mq (mobile){
+    width: 450px;
+    }
+    @include mq (mobile) {
+    width: inherit;
+    }
+    
 }
 
 &__text {
@@ -82,7 +121,10 @@
 
     padding: 63px 24px;
 
+    font-size: 15px;
+    @include mq (mobile){
     font-size: 18px;
+    }
     line-height: 1.5;
 
     color: var(--primary-background-color);
@@ -90,6 +132,25 @@
     transform: translateY(100%);
     transition: transform var(--time-function);
 }
+
+&__thumb-photo{
+    @media screen and (min-width: 320px){
+    width: 100%;
+    height: 270px;
+    }
+
+    @include mq (mobile){
+    width: 450px;
+    height: 294px;
+    }
+
+    @include mq (tablet) {
+    width: inherit;
+    height: inherit;
+    } 
+}
+
+    
 
 &__thumb::before {
     content: '';
