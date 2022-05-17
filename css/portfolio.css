@@ -990,9 +990,6 @@ button {
 }
 
 .container-mailing {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
 }
 
@@ -1100,9 +1097,9 @@ button {
 }
 
 .container-mailing__submit-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1123,24 +1120,9 @@ button {
   color: var(--white-font-color);
 }
 
-@media screen and (min-width: 480px) {
-  .container-mailing__submit-button {
-    margin-right: 125px;
-    margin-left: 125px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .container-mailing__submit-button {
-    margin-right: 140px;
-    margin-left: 140px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .container-mailing__submit-button {
     margin-left: 12px;
-    margin-right: 0;
   }
 }
 

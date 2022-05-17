@@ -583,8 +583,11 @@ button {
 @media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
+    height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/bg-hero_lg.png);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero_lg.png);
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 
@@ -730,7 +733,12 @@ button {
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
-    height: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
   }
 }
 
@@ -791,6 +799,7 @@ button {
   line-height: 1.15;
   letter-spacing: 0.01em;
   color: #757575;
+  text-align: left;
 }
 
 .form__input {
@@ -1232,13 +1241,11 @@ button {
       align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@media screen and (min-width: 480px) {
-  .company__list {
-    margin-left: -30px;
-    margin-top: -30px;
-  }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 .company__item {
@@ -1479,9 +1486,6 @@ button {
 }
 
 .container-mailing {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
 }
 
@@ -1589,9 +1593,9 @@ button {
 }
 
 .container-mailing__submit-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1612,24 +1616,9 @@ button {
   color: var(--white-font-color);
 }
 
-@media screen and (min-width: 480px) {
-  .container-mailing__submit-button {
-    margin-right: 125px;
-    margin-left: 125px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .container-mailing__submit-button {
-    margin-right: 140px;
-    margin-left: 140px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .container-mailing__submit-button {
     margin-left: 12px;
-    margin-right: 0;
   }
 }
 

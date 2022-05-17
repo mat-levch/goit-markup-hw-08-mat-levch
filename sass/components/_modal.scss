@@ -43,8 +43,11 @@
     transition: transform var(--time-function);
 
     @include mq (mobile){
-        width: 450px;
-        height: auto;
+    width: 450px;
+    }
+
+    @include mq (desktop) {
+    width: 528px;
     }
 
     &__close-button {
@@ -106,6 +109,7 @@
     letter-spacing: 0.01em;
 
     color: #757575;
+    text-align: left;
 }
 
 &__input {
@@ -161,14 +165,11 @@
 }
 
 &__group-container-svg {
-
     position: relative;
-
     margin-top: 4px;
 }
 
 &__svg {
-
     position: absolute;
 
     cursor: pointer;
@@ -191,13 +192,11 @@
 }
 
 &__policy {
-
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
 &__label-policy {
-
     display: flex;
     align-items: center;
 
@@ -230,7 +229,6 @@
 }
 
 &__policy-link {
-
     margin-left: 2px;
 
     font-size: 14px;
@@ -240,7 +238,6 @@
 }
 
 &__submit-button {
-
     margin-right: auto;
     margin-left: auto;
 

@@ -132,10 +132,7 @@
 // Форма футера
 
 .container-mailing {
-    align-items: center;
     text-align: center;
-
-    
     @include mq (desktop){
         text-align: left;
     }
@@ -221,7 +218,7 @@
 
 
 &__submit-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     text-align: center;
 
@@ -242,18 +239,8 @@
     border-radius: 4px;
     color: var(--white-font-color);
 
-    @include mq (mobile){
-    margin-right: 125px;
-    margin-left: 125px;  
-    }
-
-    @include mq (tablet-only) {
-    margin-right: 140px;
-    margin-left: 140px;
-    }
     @include mq (desktop){
         margin-left: 12px;
-        margin-right: 0;
     }  
 }
 
@@ -261,12 +248,6 @@
     margin-left: 10px;
 }
 }
-
-
-
-
-
-
 
 .social__icon {
     fill: currentColor;
