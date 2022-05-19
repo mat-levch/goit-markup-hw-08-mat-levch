@@ -783,12 +783,6 @@ button {
   width: 100%;
 }
 
-@media screen and (min-width: 480px) {
-  .portfolio__thumb-photo {
-    height: 294px;
-  }
-}
-
 .portfolio__thumb::before {
   content: '';
   display: inline-block;
