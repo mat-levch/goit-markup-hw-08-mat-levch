@@ -7,14 +7,16 @@ background-color: transparent;
 border: none;
 margin: 0;
 padding: 0;
-z-index: 99;
+
 
 
 &.is-open{
+    z-index: 99;
     @include mq (mobile){
     position: fixed;
     margin-top: 10px;
     margin-left: 410px; 
+    
     }
     
 }

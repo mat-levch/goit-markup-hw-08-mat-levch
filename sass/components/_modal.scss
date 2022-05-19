@@ -27,8 +27,7 @@
 
 .modal {
     position: absolute;
-    margin: 60px 0;
-
+    margin-top: 93px;
     padding: 40px;
     top: 50%;
     left: 50%;
@@ -44,10 +43,13 @@
 
     @include mq (mobile){
     width: 450px;
+    height: 609px;
     }
 
     @include mq (desktop) {
     width: 528px;
+    height: 581px;
+    margin-top: 0;
     }
 
     &__close-button {
@@ -199,19 +201,23 @@
 &__label-policy {
     display: flex;
     align-items: center;
-
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-
     color: var(--primary-font-color);
+    @include mq (desktop){
+    font-size: 14px;
+    }
 }
 
 &__label-policy::before {
     content: " ";
-
+    background-repeat: no-repeat;
     height: 15px;
+    width: 30px;
+    @include mq (mobile){
     width: 16px;
+    }
 
     border: 2px solid var(--secondary-font-color);
     border-radius: 2px;
@@ -230,11 +236,14 @@
 
 &__policy-link {
     margin-left: 2px;
-
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
-
     color: var(--focus-color);
+    text-decoration: underline;
+
+    @include mq (desktop){
+    font-size: 14px;
+    }
 }
 
 &__submit-button {

@@ -114,7 +114,6 @@
 
 &__text {
     position: absolute;
-
     width: 100%;
     height: 100%;
     bottom: 0;
@@ -134,20 +133,17 @@
 }
 
 &__thumb-photo{
-    @media screen and (min-width: 320px){
     width: 100%;
+
+
+    @media screen and (max-width: 479px){
     height: 270px;
     }
 
     @include mq (mobile){
-    width: 450px;
     height: 294px;
     }
-
-    @include mq (tablet) {
-    width: inherit;
-    height: inherit;
-    } 
+ 
 }
 
     

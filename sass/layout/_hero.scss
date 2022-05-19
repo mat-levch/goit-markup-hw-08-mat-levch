@@ -5,80 +5,73 @@
     margin-right: auto;
     padding-top: 118px;
     padding-bottom: 118px;
-    max-width: 450px;
+    max-width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    background-position: center;
     background-color: var(--footer-background-color);
+
+    // Ретінізація зображень
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../images/hero/bg-hero_sm.png);
+    url(../images/hero/bg-hero_sm.png);
+    @include mq (retina) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/bg-hero_sm@2x.png);
+    }
+
+    @media screen and (min-width: 576px){
+        max-width: 576px;
+    }
 
     @include mq (tablet){
-        max-width: 768px;
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(../images/hero/bg-hero_md.png);
+    max-width: 960px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/bg-hero_md.png);
+    @include mq (retina) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/bg-hero_md@2x.png);
+    }
+    }
+
+    @media screen and (min-width: 960px) {
+        max-width: 960px;
     }
 
     @include mq (desktop) {
-        max-width: 1600px;
-        height: 600px;
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(../images/hero/bg-hero_lg.png);
-        padding-top: 200px;
-        padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/bg-hero_lg.png);
+    @include mq (retina) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/bg-hero_lg@2x.png);
+    }
     }
 
-// Ретінізація зображень
-
-    @include mq (mobile){
-      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
-    url(../images/hero/bg-hero_sm.png);
-    @include mq (retina){
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
-        url(../images/hero/bg-hero_sm@2x.png);
-    }  
-    }
-    
-
-    @include mq (tablet) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../images/hero/bg-hero_md.png);
-    
-        @include mq (retina) {
-            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(../images/hero/bg-hero_md@2x.png);
-         }
-    }
-
-    @include mq (desktop) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../images/hero/bg-hero_lg.png);
-    
-        @include mq (retina) {
-            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url(../images/hero/bg-hero_lg@2x.png);
-        }
-    }
-
+    // Елементи секції герой
     &__title {
 
     color: var(--primary-background-color);
     font-weight: 900;
     text-align: center;
     font-size: 26px;
-    line-height: 1.61;
+    line-height: 1.62;
     margin: 0px auto;
     margin-bottom: 30px;
         
-
-    @include mq (tablet) {
-    width: 320px;
-    font-size: 26px;
-    line-height: 1.61;;
+    @include mq (mobile){
+        max-width: 360px;
     }
 
+    // @include mq (tablet) {
+    // width: 320px;
+    // }
+
     @include mq (desktop){
-    width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
     }

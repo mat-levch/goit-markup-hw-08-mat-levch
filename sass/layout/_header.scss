@@ -4,17 +4,22 @@
     padding-top: 16px;
     padding-bottom: 16px;   
     border-bottom: 1px solid #ececec;
-   @media screen and (min-width: 768px){
+
+
+   @include mq (tablet){
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 0;  
    }
+    
+   
 
 &__container{
     display: flex;
     align-items: center;
-
-    @media screen and (max-width: 767px) {
-        justify-content: space-between;
+    
+    
+    @include mq (mobile-only){
+    justify-content: space-between;
     }
 }
 
@@ -23,16 +28,12 @@
 
 /* -----Navigation----- */
 .nav{
-     align-items: center;
-     
+    align-items: center;
 
-     @media screen and (max-width: 767px) {
+    @include mq (mobile-only){
     display: none;
     }
 
-    
-
-        
 &-list {
     display: flex;
 
@@ -48,11 +49,11 @@
 
     &__link:hover,
     &__link:focus {
-        color: var(--focus-color);
+    color: var(--focus-color);
     }
 
     &__item {
-        position: relative;
+    position: relative;
 
     }
 
@@ -62,12 +63,12 @@
 }
 
     &__link {
-        display: block;
+    display: block;
 
-        padding-top: 32px;
-        padding-bottom: 28px;
+    padding-top: 32px;
+    padding-bottom: 28px;
 
-        transition: color var(--time-function);
+    transition: color var(--time-function);
     }
 
         
@@ -77,8 +78,6 @@
 
 /* -----Contacts----- */
 .contacts-header {
-    
-    display: flex;
     margin-left: auto;
     align-items: center;
     font-weight: 500;
@@ -86,45 +85,50 @@
     line-height: 16px;
     letter-spacing: 0.02em;
     margin-top: 21px;
-     
-@media screen and (min-width: 1200px) {
-        margin-top: 0;
+
+    @include mq (mobile-only){
+    display: none;
     }
+    @include mq (tablet){
+    display: inline-block; 
+    }
+
+    @include mq (desktop){
+    display: flex;
+    margin-top: 0;
+    } 
+
+    
     
     &__item .link {
     display: flex;
     align-items: center;
     transition: color var(--time-function);
 
-    @media screen and (min-width: 768px){  
-        margin-bottom: 10px;
-        }
-    @media screen and (min-width: 1200px) {
-        padding-top: 32px;
-        padding-bottom: 32px;
-        margin-bottom: 0;
-        margin-top: 0;
+    @include mq (tablet){
+    margin-bottom: 10px;  
     }
 
-}
-
-    &__item {
-    display: flex;
-    
+    @include mq (desktop){
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 0;
+    margin-top: 0;   
+    }
 }
 
 &__item .link:hover,
 &__item .link:focus {
     color: var(--focus-color);
-
 }
 
-
-@media screen and (min-width: 1200px){
-    &__item:not(:last-child) {
+&__item:not(:last-child){
+  @include mq (desktop){
     margin-right: 50px;
+  } 
 }
-}
+
+
 
 
 
@@ -143,17 +147,8 @@
     fill: currentColor;
 }
 
-@media screen and (min-width: 768px){
-    display: inline-block;
-}
-@media screen and (min-width:1200px) {
-    display: flex;
-}
 
-@media screen and (max-width: 767px){
-    display: none;
-}
-
+    
 }
 
 
