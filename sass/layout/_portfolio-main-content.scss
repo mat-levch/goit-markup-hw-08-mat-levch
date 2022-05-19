@@ -97,28 +97,19 @@
 &__thumb {
     position: relative;
     overflow: hidden;
-
-
-    @media screen and (min-width: 320px){
     width: 100%;
-    }
-
-    @include mq (mobile){
-    width: 450px;
-    }
-    @include mq (mobile) {
-    width: inherit;
-    }
     
 }
 
 &__text {
     position: absolute;
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 100%;
     bottom: 0;
 
-    padding: 63px 24px;
+    padding: 0 24px;
 
     font-size: 15px;
     @include mq (mobile){
@@ -134,12 +125,6 @@
 
 &__thumb-photo{
     width: 100%;
-
-
-    @media screen and (max-width: 479px){
-    height: 270px;
-    }
-
     @include mq (mobile){
     height: 294px;
     }
