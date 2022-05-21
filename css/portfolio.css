@@ -334,11 +334,10 @@ button {
 }
 
 .mobile-contacts {
-  margin-bottom: 64px;
   margin-top: auto;
 }
 
-.mobile-contacts__item:not(:last-child) {
+.mobile-contacts__item {
   margin-bottom: 32px;
 }
 
@@ -347,7 +346,6 @@ button {
   font-size: 34px;
   line-height: 1.17;
   color: var(--focus-color);
-  margin-bottom: 32px;
 }
 
 .mobile-contacts__link--mail {
@@ -681,7 +679,6 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 30px;
   margin-bottom: 30px;
 }
 
@@ -689,6 +686,7 @@ button {
   .portfolio__item {
     -ms-flex-preferred-size: calc(50% - 30px);
         flex-basis: calc(50% - 30px);
+    margin-right: 30px;
   }
 }
 
@@ -704,11 +702,18 @@ button {
 }
 
 .portfolio__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: -webkit-box-shadow var(--time-function);
   transition: -webkit-box-shadow var(--time-function);
   transition: box-shadow var(--time-function);
   transition: box-shadow var(--time-function), -webkit-box-shadow var(--time-function);
+  height: 100%;
 }
 
 .portfolio__link:hover, .portfolio__link:focus {
@@ -739,6 +744,9 @@ button {
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
   border-top: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .portfolio__thumb {

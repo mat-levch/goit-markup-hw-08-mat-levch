@@ -334,11 +334,10 @@ button {
 }
 
 .mobile-contacts {
-  margin-bottom: 64px;
   margin-top: auto;
 }
 
-.mobile-contacts__item:not(:last-child) {
+.mobile-contacts__item {
   margin-bottom: 32px;
 }
 
@@ -347,7 +346,6 @@ button {
   font-size: 34px;
   line-height: 1.17;
   color: var(--focus-color);
-  margin-bottom: 32px;
 }
 
 .mobile-contacts__link--mail {
