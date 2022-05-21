@@ -13,39 +13,31 @@
 &__list {
     display: flex;
     flex-wrap: wrap;
-
     @include mq (tablet){
+    margin-left: 30px;
+    }
+
+    @include mq (desktop){
     margin-top: -30px;
     margin-left: -30px;  
     }
-    
-
 }
 
 &__item {
-    width: 450px;
-    height: 404px;
     justify-content: center;
-    @include mq (tablet){
-    flex-basis: calc((100% - 60px) / 2);
-    width: 354px;
-    margin-left: 30px;
-    margin-top: 30px; 
-    }
-    
-    &:not(:last-child) {
+    margin-right: 30px;
     margin-bottom: 30px;
+
+    @include mq (tablet){
+    flex-basis: calc(50% - 30px)
     }
 
-    &:not(:last-child){
-    @include mq (tablet){
-    margin-bottom: 0;   
-    } 
-    }
-    
     @include mq (desktop){
-    flex-basis: calc((100% - 90px) / 3);
-    width: 370px; 
+    flex-basis: calc((100% - 90px) / 3); 
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-right: 0;
     }
 }
 
@@ -82,10 +74,8 @@
 
 &__label {
     padding: 20px 24px;
-
-    border-right: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
-    border-left: 1px solid #EEEEEE;
+    border: 1px solid #EEEEEE;
+    border-top: 0;
 }
 
 
@@ -123,9 +113,7 @@
     transition: transform var(--time-function);
 }
 
-&__thumb-photo{
-    width: 100%;
-}
+
 
     
 

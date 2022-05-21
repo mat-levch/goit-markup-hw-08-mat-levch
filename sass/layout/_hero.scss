@@ -12,6 +12,10 @@
     background-position: center;
     background-color: var(--footer-background-color);
 
+    & .container{
+        display: inline-block;
+    }
+
     // Ретінізація зображень
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero/bg-hero_sm.png);
@@ -49,6 +53,7 @@
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero/bg-hero_lg@2x.png);
     }
+
     }
 
     // Елементи секції герой

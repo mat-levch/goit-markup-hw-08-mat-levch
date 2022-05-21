@@ -40,14 +40,14 @@
       </nav>
       <ul class="contacts-header list">
         <li class="contacts-header__item">
-          <a href="mailto:info@devstudio.com" class="contacts-header__link link">
-            <svg class="contacts-header__icon-mail" aria-label="Переключатель мобильного меню">
+          <a href="mailto:info@devstudio.com" class="contacts-header__link--mail link">
+            <svg class="contacts-header__icon-mail">
               <use href="./images/icons/symbol-defs.svg#icon-mail"></use>
             </svg>
             info@devstudio.com</a>
         </li>
 
-        <li class="contacts-header__item"><a href="tel:+380961111111" class="contacts-header__link link">
+        <li class="contacts-header__item"><a href="tel:+380961111111" class="contacts-header__link--phone link">
             <svg class="contacts-header__icon-phone">
               <use href="./images/icons/symbol-defs.svg#icon-phone"></use>
             </svg>
@@ -61,7 +61,7 @@
   <main>
     <!-- Герой -->
       <section class="hero">
-      <div>
+      <div class="container">
         <h1 class="hero__title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
         <button data-modal-open type="button" class="hero__button">Заказать услугу</button>
       </div>  
@@ -158,8 +158,9 @@
 </div>
     <!-- Команда -->
      <section class="team section">
-      <h2 class="team__title title">Наша команда</h2>
-      <ul class="team__list container list">
+       <h2 class="team__title title">Наша команда</h2>
+      <div class="container"> 
+      <ul class="team__list list">
         <li class="team__item  item">
           <picture>
             <source srcset="./images/team/team-mobile/member1.jpg 1x, ./images/team/team-mobile/member1@2x.jpg 2x" media="(min-width: 480px)">
@@ -332,6 +333,7 @@
           </div>
         </li>
       </ul>
+    </div>
     </section> 
     <!-- Компанії -->
      <section class="company section">
@@ -468,10 +470,18 @@
         </li>
       </ul>
     </nav>
-    <div class="mobile-contacts">
-      <a class="mobile__link mobile-contacts__link--phone link" href="tel:+380961111111">+38 096 111 11 11</a>
-      <br>
-      <a class="mobile__link mobile-contacts__link--mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+
+      <ul class="mobile-contacts list" >
+        <li class="mobile-contacts__item">
+          <a class="mobile__link mobile-contacts__link--phone link" href="tel:+380961111111">+38 096 111 11 11</a>
+          
+        </li>
+        <li class="mobile-contacts__item">
+          <a class="mobile__link mobile-contacts__link--mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+      </ul>
+      
+      
 
        <ul class="mobile-social__list list">
       <li class="mobile-social__item">
@@ -494,7 +504,7 @@
   <div data-modal class="backdrop is-hidden">
     <div class="modal">
       <button data-modal-close type="button" class="modal__close-button">
-        <svg class="modal__close-button-svg">
+        <svg class="modal__close-button-svg" width="16px" height="16px">
           <use href="./images/icons/symbol-defs.svg#icon-close-button"></use>
         </svg>
       </button>
@@ -505,7 +515,7 @@
         <label type="name" name="name" for="name" class="form__label">Имя</label>
         <div class="form__group-container-svg">
           <input type="text" name="name" id="name" class="form__input">
-          <svg class="form__svg" width="18" height="18">
+          <svg class="form__svg" width="14" height="14">
             <use href="./images/icons/symbol-defs.svg#icon-person"></use>
           </svg>
         </div>
@@ -513,7 +523,7 @@
         <label type="tel" name="tel" for="tel" class="form__label">Телефон</label>
         <div class="form__group-container-svg">
           <input type="tel" name="tel" id="tel" class="form__input">
-          <svg class="form__svg" width="18" height="18">
+          <svg class="form__svg" width="13" height="13">
             <use href="./images/icons/symbol-defs.svg#icon-number"></use>
           </svg>
         </div>
@@ -521,7 +531,7 @@
         <label type="email" name="email" for="email" class="form__label">Почта</label>
         <div class="form__group-container-svg">
           <input type="email" name="email" id="email" class="form__input">
-          <svg class="form__svg" width="18" height="18">
+          <svg class="form__svg" width="14" height="14">
             <use href="./images/icons/symbol-defs.svg#icon-email"></use>
           </svg>
         </div>
@@ -530,11 +540,18 @@
           <textarea name="feedback" id="feedback" placeholder="Введите текст" class="form__textarea"></textarea>
         </label>
   
-        <div class="form__policy">
-          <input type="checkbox" value="" id="policy" class="form__checkbox">
-          <label for="policy" class="form__label-policy">Соглашаюсь с рассылкой и принимаю<a href=""
-              class="form__policy-link">Условия договора</a></label>
+        <div class="form-policy">
+          <label class="form-policy__label-check">
+          <input class="form-policy__checkbox" type="checkbox">
+          <span class="form-policy__icon--check"></span>
+          <span class="form-policy__text">Соглашаюсь с рассылкой и принимаю 
+          <a href="" class="form__policy-link">Условия договора</a>
+        </span>
+        </label>
         </div>
+
+          
+          
   
         <button type="submit" class="form__submit-button">Отправить</button>
   

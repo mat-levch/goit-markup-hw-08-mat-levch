@@ -267,7 +267,7 @@ button {
   width: 100vh;
   height: 100vh;
   background-color: var(--primary-background-color);
-  z-index: 10;
+  z-index: 1;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   visibility: hidden;
@@ -305,8 +305,8 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-left: 40px;
   height: 100%;
+  padding: 48px 40px;
 }
 
 .mobile-nav__list {
@@ -320,15 +320,10 @@ button {
 
 .mobile-nav__item {
   color: var(--secondary-font-color);
+}
+
+.mobile-nav__item:not(:last-child) {
   margin-bottom: 32px;
-}
-
-.mobile-nav__item:nth-child(1) {
-  margin-top: 48px;
-}
-
-.mobile-nav__item:nth-child(3) {
-  margin-top: 48px;
 }
 
 .mobile-nav__link:hover,
@@ -339,7 +334,12 @@ button {
 }
 
 .mobile-contacts {
-  padding-bottom: 48px;
+  margin-bottom: 64px;
+  margin-top: auto;
+}
+
+.mobile-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .mobile-contacts__link--phone {
@@ -347,6 +347,7 @@ button {
   font-size: 34px;
   line-height: 1.17;
   color: var(--focus-color);
+  margin-bottom: 32px;
 }
 
 .mobile-contacts__link--mail {
@@ -360,15 +361,13 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 64px;
-  margin-right: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 10px;
 }
 
 .mobile-social__item {
   font-family: Roboto, sans-serif;
-  font-style: 400;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -377,9 +376,7 @@ button {
 
 .mobile-social__item:not(:last-child) {
   padding-right: 10px;
-  margin-right: 20px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
-  margin-bottom: 48px;
 }
 
 .mobile-social__link {
@@ -472,7 +469,6 @@ button {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
-  margin-top: 21px;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -496,6 +492,19 @@ button {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts-header__link--mail {
+    padding-top: 21px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts-header__link--phone {
+    padding-bottom: 21px;
+  }
+}
+
 .contacts-header__item .link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -507,17 +516,10 @@ button {
   transition: color var(--time-function);
 }
 
-@media screen and (min-width: 768px) {
-  .contacts-header__item .link {
-    margin-bottom: 10px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .contacts-header__item .link {
     padding-top: 32px;
     padding-bottom: 32px;
-    margin-bottom: 0;
     margin-top: 0;
   }
 }
@@ -664,36 +666,29 @@ button {
 
 @media screen and (min-width: 768px) {
   .portfolio__list {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__list {
     margin-top: -30px;
     margin-left: -30px;
   }
 }
 
 .portfolio__item {
-  width: 450px;
-  height: 404px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-@media screen and (min-width: 768px) {
-  .portfolio__item {
-    -ms-flex-preferred-size: calc((100% - 60px) / 2);
-        flex-basis: calc((100% - 60px) / 2);
-    width: 354px;
-    margin-left: 30px;
-    margin-top: 30px;
-  }
-}
-
-.portfolio__item:not(:last-child) {
+  margin-right: 30px;
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
-  .portfolio__item:not(:last-child) {
-    margin-bottom: 0;
+  .portfolio__item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+        flex-basis: calc(50% - 30px);
   }
 }
 
@@ -701,7 +696,10 @@ button {
   .portfolio__item {
     -ms-flex-preferred-size: calc((100% - 90px) / 3);
         flex-basis: calc((100% - 90px) / 3);
-    width: 370px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-right: 0;
   }
 }
 
@@ -739,9 +737,8 @@ button {
 
 .portfolio__label {
   padding: 20px 24px;
-  border-right: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
-  border-left: 1px solid #EEEEEE;
+  border: 1px solid #EEEEEE;
+  border-top: 0;
 }
 
 .portfolio__thumb {
@@ -777,10 +774,6 @@ button {
   .portfolio__text {
     font-size: 18px;
   }
-}
-
-.portfolio__thumb-photo {
-  width: 100%;
 }
 
 .portfolio__thumb::before {
@@ -921,6 +914,12 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__social {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
