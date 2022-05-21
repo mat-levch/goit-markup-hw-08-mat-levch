@@ -268,13 +268,13 @@ button {
   height: 100vh;
   background-color: var(--primary-background-color);
   z-index: 1;
+  visibility: hidden;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  visibility: hidden;
-  -webkit-transition: -webkit-transform var(--time-function);
-  transition: -webkit-transform var(--time-function);
-  transition: transform var(--time-function);
-  transition: transform var(--time-function), -webkit-transform var(--time-function);
+  -webkit-transition: visibility var(--time-function), -webkit-transform var(--time-function);
+  transition: visibility var(--time-function), -webkit-transform var(--time-function);
+  transition: transform var(--time-function), visibility var(--time-function);
+  transition: transform var(--time-function), visibility var(--time-function), -webkit-transform var(--time-function);
 }
 
 .mobile-overlay.is-open {
