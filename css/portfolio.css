@@ -452,7 +452,7 @@ button {
 .nav-list__link {
   display: block;
   padding-top: 32px;
-  padding-bottom: 28px;
+  padding-bottom: 32px;
   -webkit-transition: color var(--time-function);
   transition: color var(--time-function);
 }
@@ -853,6 +853,7 @@ button {
     text-align: left;
     width: 231px;
     margin-right: 70px;
+    margin-bottom: 0;
   }
 }
 
