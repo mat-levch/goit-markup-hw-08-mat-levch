@@ -100,17 +100,22 @@
     &__link--mail{
         @include mq (tablet-only){
             padding-top: 21px;
-            margin-bottom: 10px;
         }
     }
     &__link--phone {
         @include mq (tablet-only) {
-            padding-bottom: 21px;
+        padding-bottom: 21px;
         }
     }
 
 
-    
+    &__item:not(:last-child){
+        @include mq (tablet-only) {
+        margin-bottom: 10px;
+        }   
+    }
+        
+
     &__item .link {
     display: flex;
     align-items: center;

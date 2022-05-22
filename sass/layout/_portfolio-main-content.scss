@@ -105,15 +105,15 @@
     padding: 0 24px;
 
     font-size: 15px;
-    @include mq (mobile){
-    font-size: 18px;
-    }
     line-height: 1.5;
-
     color: var(--primary-background-color);
 
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform var(--time-function);
+    
+    @media screen and (min-width: 370px){
+    font-size: 18px;
+    }
 }
 
 

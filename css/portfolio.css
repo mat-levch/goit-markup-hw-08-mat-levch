@@ -493,13 +493,18 @@ button {
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contacts-header__link--mail {
     padding-top: 21px;
-    margin-bottom: 10px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contacts-header__link--phone {
     padding-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts-header__item:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 
@@ -770,15 +775,15 @@ button {
   font-size: 15px;
   line-height: 1.5;
   color: var(--primary-background-color);
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
   -webkit-transition: -webkit-transform var(--time-function);
   transition: -webkit-transform var(--time-function);
   transition: transform var(--time-function);
   transition: transform var(--time-function), -webkit-transform var(--time-function);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 370px) {
   .portfolio__text {
     font-size: 18px;
   }

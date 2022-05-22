@@ -493,13 +493,18 @@ button {
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contacts-header__link--mail {
     padding-top: 21px;
-    margin-bottom: 10px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .contacts-header__link--phone {
     padding-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts-header__item:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 
@@ -1279,29 +1284,43 @@ button {
 
 /* -----------Company section----------- */
 .company__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: -30px;
-  margin-top: -30px;
+  display: block;
+}
+
+@media screen and (min-width: 480px) {
+  .company__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
 .company__item {
-  margin-left: 30px;
-  margin-top: 30px;
+  width: 100%;
+}
+
+.company__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 480px) {
   .company__item {
+    margin-left: 30px;
+    margin-top: 30px;
     -ms-flex-preferred-size: calc((100% - 60px) / 2);
         flex-basis: calc((100% - 60px) / 2);
+  }
+  .company__item:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 

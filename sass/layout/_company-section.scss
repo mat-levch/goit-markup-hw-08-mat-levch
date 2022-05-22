@@ -1,24 +1,36 @@
 /* -----------Company section----------- */
 
 .company__list {
+
+    display: block;
+    @include mq (mobile){
     display: flex;
     align-content: center;
     flex-wrap: wrap;
     justify-content: center;
     
     margin-left: -30px;
-    margin-top: -30px;
+    margin-top: -30px;   
+    }
+    
     
 
 }
 
 
 .company__item{
+    width: 100%;
+    &:not(:last-child){
+    margin-bottom: 30px;   
+    }
+    
+    @include mq (mobile){
     margin-left: 30px;
     margin-top: 30px;
-
-    @include mq (mobile){
     flex-basis: calc((100% - 60px) / 2);
+    &:not(:last-child) {
+    margin-bottom: 0;
+    }
     }
     @include mq (tablet) {
     flex-basis: calc((100% - 120px) / 4);
