@@ -82,11 +82,6 @@
 }
 
 
-
-
-
-
-
 &__thumb {
     position: relative;
     overflow: hidden;
@@ -97,22 +92,20 @@
 &__text {
     position: absolute;
     display: flex;
-    align-items: center;
     width: 100%;
     height: 100%;
+    padding: 77px 24px;
     bottom: 0;
-
-    padding: 0 24px;
-
-    font-size: 15px;
-    line-height: 1.5;
+    overflow-y: scroll;
+    font-size: 18px;
+    line-height: 28px;
     color: var(--primary-background-color);
 
     transform: translateY(101%);
     transition: transform var(--time-function);
-    
-    @media screen and (min-width: 370px){
-    font-size: 18px;
+
+    @include mq (mobile){
+    align-items: center;
     }
 }
 

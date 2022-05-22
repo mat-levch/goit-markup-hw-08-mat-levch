@@ -765,15 +765,13 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   height: 100%;
+  padding: 77px 24px;
   bottom: 0;
-  padding: 0 24px;
-  font-size: 15px;
-  line-height: 1.5;
+  overflow-y: scroll;
+  font-size: 18px;
+  line-height: 28px;
   color: var(--primary-background-color);
   -webkit-transform: translateY(101%);
           transform: translateY(101%);
@@ -783,9 +781,11 @@ button {
   transition: transform var(--time-function), -webkit-transform var(--time-function);
 }
 
-@media screen and (min-width: 370px) {
+@media screen and (min-width: 480px) {
   .portfolio__text {
-    font-size: 18px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
